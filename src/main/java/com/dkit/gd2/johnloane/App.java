@@ -21,10 +21,23 @@ public class App
 //        BetterPlayer player = new BetterPlayer("Kevin", 200, "Sword");
 //        System.out.println("Hitpoints " + player.getHitPoints());
         demoPrinter();
+        demoPC();
 
     }
 
-    public static void demoPrinter()
+    private static void demoPC()
+    {
+        Dimensions dimensions = new Dimensions(15, 45, 45);
+        Case theCase = new Case("20B", "Dell", "240v", dimensions);
+        Monitor theMonitor = new Monitor("Lenovo 24", "IBM", 24, new Resolution(3840, 2160));
+        Motherboard theMotherboard = new Motherboard("G99", "Asus", 4, 6, "v7.0");
+        GraphicsCard theGPU = new GraphicsCard("3090", "Nvidia", 16);
+        CPU theCPU = new CPU("Ryzen", "AMD", 16, 5000, 9);
+        PC myNewPC = new PC(theCase, theMonitor, theMotherboard, theGPU, theCPU);
+        myNewPC.powerUp();
+    }
+
+    private static void demoPrinter()
     {
         Printer printer = new Printer(50, false);
         System.out.println("Initial page count = " + printer.getPagesPrinted());
