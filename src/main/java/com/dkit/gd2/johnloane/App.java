@@ -46,12 +46,17 @@ public class App
     }
 
     /*
-    Create a class to demonstrate encapsulation
-    The class will be called Printer
-    It should have fields for toner level, number of pages printed and
-    also whether it is a duplex printer (prints on both sides)
-    Add methods to fill up the toner (up to max of 100%) another
-    method to simulate printing a page (increase number of pages printed
-
+    Create a single room of a house using composition
+    Think about what should be included in the room
+    It could be the physical parts of the house, as well as furniture
+    Add at least one method to access an object by a getter and the
+    use that objects public method
+    Then at least one method to hide the object (not using getter) but to access the object via composition
      */
+    private static void demoRoomOfHouse()
+    {
+        bedRoom.makeBed();
+
+        bedRoom.getLamp().turnOn();
+    }
 }
