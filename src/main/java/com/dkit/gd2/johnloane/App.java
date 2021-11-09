@@ -35,7 +35,7 @@ public class App
         We want to create a base hamburger, but also two other popular types of hamburger.
         The basic hamburger should have the following:
         bun type, meat, up to 4 additional fillings
-        This base burger gas a base prive and fillings are all separately priced
+        This base burger has a base price and fillings are all separately priced
         Create a hamburger class to deal with all of the above
         The constructor should only include bun type, meat and price, can also include name of burger
         Also create two additional Hamburgers to cater for
@@ -44,6 +44,15 @@ public class App
         2) Deluxe Hamburger - comes with chips and drinks as extras, no extra fillings
         All 3 classes should have a method that can be called anytime to show the base price of the hamburger plus all fillings, each showing the filling name and price and a grant total for the burger (base price + all additions)
          */
+        Hamburger hamburger = new Hamburger("Cheese Burger", "Beef", 6.00, "White");
+
+        hamburger.addFilling("Cheese", 0.20);
+        hamburger.addFilling("Tomatoes", 0.30);
+        double price = hamburger.itemiseHamburger();
+        System.out.printf("Total burger price is %.2f", price);
+
+        createAndTestHealthyHamburger();
+        createAndTestDeluxeHamburger();
     }
 
     private static void driveCars()
